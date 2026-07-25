@@ -1,0 +1,547 @@
+{
+  "description": "Provenance record for the 2026-07-25 move of assets/ from yubi-OS/yubiOS into this repo.",
+  "migrated_at": "2026-07-25",
+  "source_repo": "yubi-OS/yubiOS",
+  "source_commit_after_delete": "3296fa20f97b5d003008dfd0eb816645246c8dce",
+  "dest_repo": "yubi-OS/assets",
+  "dest_commit": "8f1c63406dc94a43a45a8d6fe427f6751ae0e182",
+  "dest_tree": "70a6a78734c6ead5e66183d8143ba9be1def2d95",
+  "file_count": 89,
+  "verification": "each file copied via Git Data API blob (content-addressed, so git blob SHA equality already proves byte-for-byte match) and independently re-verified with a sha256 recompute after commit; zero mismatches across all files",
+  "files": [
+    {
+      "path": "OS first-looks/README.md",
+      "size": 1783,
+      "git_sha": "2149fb922481b048a2b66b99d5e2b8eba82a239c",
+      "sha256": "3d3606bf5e42875e3f434bd5102fc448feb542f0c19fdd225c7a7457dc2a53f3"
+    },
+    {
+      "path": "OS first-looks/yubios-gnome-overview-concept-4k-dark.png",
+      "size": 6894399,
+      "git_sha": "12aeadfa9e9be7e11a6918aee16a44e16c6c0a44",
+      "sha256": "1b632057db34f0ebf61d63aae20f99a2a5f06552df924218c04a77ce7f5ddca9"
+    },
+    {
+      "path": "OS first-looks/yubios-gnome-overview-concept-4k-light.png",
+      "size": 7607761,
+      "git_sha": "e5e8da4ed611ed30795003c1747981110d12da6e",
+      "sha256": "44583fa74c5912f0410a870d6fe45b1159e1b0cada06cec1ec4acc25c24e1aa9"
+    },
+    {
+      "path": "OS first-looks/yubios-gnome-overview-concept-4k.png",
+      "size": 7720379,
+      "git_sha": "0dfc5646affbea5ca5bed71ebf38c6d30ecc8a88",
+      "sha256": "abe31b3b37226f3b85e756ee8cd96f35b3299b280e5ac73fe56282f367c4e4fe"
+    },
+    {
+      "path": "OS first-looks/yubios-owner-key-enrollment-concept-4k-dark.png",
+      "size": 4017271,
+      "git_sha": "ab203c299b84bfbffd0df79a8962e882071347aa",
+      "sha256": "463a842fcbe74fb9cb751b7fd0c4990c8beb80865525751303179644fc0859c3"
+    },
+    {
+      "path": "OS first-looks/yubios-owner-key-enrollment-concept-4k-light.png",
+      "size": 3965215,
+      "git_sha": "dc0cfbb6048cc9b6c888f81f193f6dde41b0aff2",
+      "sha256": "f2029de3e0484b095d753c46b1401cbf152eac356172d8142a1f002b82005ecf"
+    },
+    {
+      "path": "OS first-looks/yubios-owner-key-enrollment-concept-4k.png",
+      "size": 5893411,
+      "git_sha": "03fec9fe26ff3e0706db258996858bda0ee19d0b",
+      "sha256": "7515eac10a00bf1940316ab308db8828fc3ecc6d071777019637776488cf7d87"
+    },
+    {
+      "path": "OS first-looks/yubios-system-trust-concept-4k-dark.png",
+      "size": 5233569,
+      "git_sha": "ea46c8971fc50e9d7605ee893c082818a72dfd6b",
+      "sha256": "1f2fa0ebd60e44fc4ab9150d3b08fa3efee7fcf97de5ad3d8453f70fd3c94497"
+    },
+    {
+      "path": "OS first-looks/yubios-system-trust-concept-4k-light.png",
+      "size": 4857097,
+      "git_sha": "a577346beec73dd5e5a20128a6d306c16c179e8c",
+      "sha256": "f897d2d3af2156dc51ec1a465c971513ae9baee497b737c505cdad7d0d87b700"
+    },
+    {
+      "path": "OS first-looks/yubios-system-trust-concept-4k.png",
+      "size": 7653327,
+      "git_sha": "375a67920366b88b8317ed08d43e6e71f783d790",
+      "sha256": "55c6d995796ffedd1504dcf837255413b65f7806241465e13045189cd9cdf9b4"
+    },
+    {
+      "path": "README.html",
+      "size": 19465,
+      "git_sha": "8d8121d766e7480ff0566e2e36236298102ae813",
+      "sha256": "4bb08003a4527d7d8f33c86aa971835730bd66b975934c1a68969baab7e721f0"
+    },
+    {
+      "path": "Sovereign_Operating_System_Security_Roadmap.png",
+      "size": 4779042,
+      "git_sha": "aec5f9b8e2512fb1a9e5cecf2e5bb7d4fd32725c",
+      "sha256": "f35eeb8b612aca8dc5a3bfc3aaef76c40b34f6dee8eabe35c2e1c6559de1409a"
+    },
+    {
+      "path": "ads/README.md",
+      "size": 5161,
+      "git_sha": "df37757cb7e47926e21ed4bf821e101dd75ce93b",
+      "sha256": "2ac89e8084f2e063fd8b4c561ad628890bead5b11420fe526583f5b82f3c1231"
+    },
+    {
+      "path": "ads/source/render-ads.sh",
+      "size": 6672,
+      "git_sha": "560026e87fd186577a087f6a113ea487d1b1721d",
+      "sha256": "67c3103b40bbc050adbc32b55e0dd5055644b0df072d356ba87f19bb1fd5a26c"
+    },
+    {
+      "path": "ads/source/v1/ad-landscape-1200x628.svg",
+      "size": 3853,
+      "git_sha": "564e67935fc34e24522ba0e867cd42507528fc7d",
+      "sha256": "3beb524b09bb769641f0df8c1c72e873b5d904b6fb726a0799a162c29c280055"
+    },
+    {
+      "path": "ads/source/v1/ad-leaderboard-728x90.svg",
+      "size": 2254,
+      "git_sha": "af7997a0709372d37c97dea764543f3aea89738a",
+      "sha256": "cd86205cd609ed754ea437ec533bb520fb678c794c7164171ec6da9fd271c1b9"
+    },
+    {
+      "path": "ads/source/v1/ad-linux-penguin-banner-970x250.svg",
+      "size": 2929,
+      "git_sha": "06bf0e473887511001724a8235771e8bc20e6d0a",
+      "sha256": "c9f1048c1f42b91379340a9affb87f5d075e3f57e055d33ea562981856c6b3ca"
+    },
+    {
+      "path": "ads/source/v1/ad-medium-rectangle-300x250.svg",
+      "size": 2419,
+      "git_sha": "d24020c70da470a5f9f26e2d6917fd702b92a095",
+      "sha256": "ded20f00357b23dffbea0307706f32b98343bbc468f35484aaf13ebe4a6563e3"
+    },
+    {
+      "path": "ads/source/v1/ad-skyscraper-160x600.svg",
+      "size": 2903,
+      "git_sha": "a4376fa18dafb44abf9e8b2094f8a788882faa61",
+      "sha256": "2a08c1cf79a64771a897907b42cca5b38e36aaefcffdf63baf4ad4b67fd2f55d"
+    },
+    {
+      "path": "ads/source/v1/ad-square-1080x1080.svg",
+      "size": 4475,
+      "git_sha": "e76b712373c1b960cf8d9cfab29e852d4810ddf2",
+      "sha256": "ffbef9015ede4679804b3c0979c3d32a7539e77931739d8f9a51444f3a44120c"
+    },
+    {
+      "path": "ads/source/v1/linux-penguin-foundation.png",
+      "size": 160990,
+      "git_sha": "bc38558e2e21162eea5e99b53aba0a8a2795e850",
+      "sha256": "729914753811a1ca45f52f399255dad168d15ab38782b4eb3c38646c222fffa0"
+    },
+    {
+      "path": "ads/source/v2/PROMPTS.md",
+      "size": 10258,
+      "git_sha": "bffd9d33fac5308d017d896ea00d709a45b04f58",
+      "sha256": "11463da2abb338aa89511919a42fc94d52c7e784c6c0f873f60659ee945a7ff8"
+    },
+    {
+      "path": "ads/source/v2/ad-landscape-1200x628.svg",
+      "size": 2499,
+      "git_sha": "70785c05d8747f39a300366f87f11f5f11121fd7",
+      "sha256": "b6e115466c8ca3f16510769e2e06bd576781ee27831e163046bb7bee6b7a5b53"
+    },
+    {
+      "path": "ads/source/v2/ad-leaderboard-728x90.svg",
+      "size": 1908,
+      "git_sha": "5d0a3332d6db7c8ba76d0329185fefb1040c1e80",
+      "sha256": "d39a5ec638fafdd39638c97b12cc14beacdcfeb016e516427501b2d82939da5a"
+    },
+    {
+      "path": "ads/source/v2/ad-linux-penguin-banner-970x250.svg",
+      "size": 2763,
+      "git_sha": "d655140d1b385e6baadbf4c53ae68887527529e5",
+      "sha256": "9abcbda54195bcdb00f20f26962c4e57a75794dbb663fab2a7f25241bd57821b"
+    },
+    {
+      "path": "ads/source/v2/ad-medium-rectangle-300x250.svg",
+      "size": 2147,
+      "git_sha": "85c29d18f583f7373d725657fdb240a40dcb8e8b",
+      "sha256": "db79e9b5cfe442cf99556d97e5bad26f0cf559351e0dabd4e05290686036be5d"
+    },
+    {
+      "path": "ads/source/v2/ad-skyscraper-160x600.svg",
+      "size": 2593,
+      "git_sha": "49f9ae65ed9583a2177be7d719df24933a0896b7",
+      "sha256": "5bceaf2a9ef7980b093c6fd0910a9a579b7bf7568c77a2fbc23936b83d9ac0c6"
+    },
+    {
+      "path": "ads/source/v2/ad-square-1080x1080.svg",
+      "size": 3336,
+      "git_sha": "80648d9cee15d21d48c2d934c5b0f96f2fa4542a",
+      "sha256": "24f1f7bc73fec1d5d5f2f8fcb87cbf40012649882c6ac5fba2ebde667180c12b"
+    },
+    {
+      "path": "ads/source/v2/foundations/landscape-chain.png",
+      "size": 1456741,
+      "git_sha": "d6dbb18641d92f4440e16175cf4b25fd052c073d",
+      "sha256": "bd37948b7a50e6b2cf2100b5c3c5eeea9244720c5d42ead38ea6abc397a692fd"
+    },
+    {
+      "path": "ads/source/v2/foundations/leaderboard-chain.png",
+      "size": 1214464,
+      "git_sha": "2948cf022d561d5dc25764751bc7a4f344894047",
+      "sha256": "55accab6a5dba2c659066e247a60eb70266fd1ee5c58120b128bd1ed5909cdb5"
+    },
+    {
+      "path": "ads/source/v2/foundations/linux-penguin.png",
+      "size": 1721289,
+      "git_sha": "9ad45b00e22e4954293d88f0f01406e3c6e28bc7",
+      "sha256": "5e9cddf4a8c45d5ada256a93fef43103305da93e532556877def360ba8fa83c4"
+    },
+    {
+      "path": "ads/source/v2/foundations/medium-chain.png",
+      "size": 1285560,
+      "git_sha": "7f2746b2ebee1da6bdf22071bd04a2da4b305cd4",
+      "sha256": "3aeb768bfca99bc6afdfb694ef9520be5541d5940d3ac2d2e9b7e17bc853c26f"
+    },
+    {
+      "path": "ads/source/v2/foundations/skyscraper-chain.png",
+      "size": 1450801,
+      "git_sha": "7e22dce69d36661b7780874312e80b25834dd54a",
+      "sha256": "4fa400d5a5993b93e3a55776c2a5066eea9d013c697318b00243b7ed61d6c463"
+    },
+    {
+      "path": "ads/source/v2/foundations/square-chain.png",
+      "size": 1553126,
+      "git_sha": "d285b88fa93bbb0729ef601fdadc93f147c9edfe",
+      "sha256": "2c647e8ae7c05d5a081bb05985ff3a222e2727584b1e8eda01ea50c21b3c000c"
+    },
+    {
+      "path": "ads/v1-upscaled/yubios-ad-landscape-2400x1256.png",
+      "size": 1130131,
+      "git_sha": "cb51ac867101dc3517828c594f9cf76acf6a1efd",
+      "sha256": "e7f14ef20214aa01eb05362d96635f7dfa6ea8b3d87fb48d1e7060a98ea275ca"
+    },
+    {
+      "path": "ads/v1-upscaled/yubios-ad-leaderboard-1456x180.png",
+      "size": 104251,
+      "git_sha": "19131b71054055484a9161240eadff04d8fd6878",
+      "sha256": "d6429aa5994a16057fcb10d736366c21130ee85aac662bd94ed02638a056fd71"
+    },
+    {
+      "path": "ads/v1-upscaled/yubios-ad-linux-penguin-banner-1940x500.png",
+      "size": 568216,
+      "git_sha": "e14f6e80486f26dcee995c4f94246d7314193778",
+      "sha256": "c4f082a9083970665bb415ea8d7a4ccd931f01d2d194b231a6437466150d1d58"
+    },
+    {
+      "path": "ads/v1-upscaled/yubios-ad-medium-rectangle-600x500.png",
+      "size": 128877,
+      "git_sha": "8a4e1aa67ad68c0dba8b707a0b3f1e1b8425563c",
+      "sha256": "88fe92a68b8dba1312c5663fc97a2cd0550b74cdaa3d3fd0124c050b96452964"
+    },
+    {
+      "path": "ads/v1-upscaled/yubios-ad-skyscraper-320x1200.png",
+      "size": 154012,
+      "git_sha": "9f78718d08ea6d8191337b84cab944e0bfafd5cb",
+      "sha256": "78a06d01aa19c11c69cf2db45ffa92c2f1cfe96903d827da1b0fc86cc1ed9677"
+    },
+    {
+      "path": "ads/v1-upscaled/yubios-ad-square-2160x2160.png",
+      "size": 934137,
+      "git_sha": "d12488d534361fa0963276af6293106f6b5490a0",
+      "sha256": "431dfcf17def83aa9a2ab24d5668c578d229be024c8dfed33263e2223e25e822"
+    },
+    {
+      "path": "ads/v1/yubios-ad-landscape-1200x628.png",
+      "size": 361855,
+      "git_sha": "cf6369d4b225ac64e61d497a746ef54a8720f550",
+      "sha256": "3e40f615093892fd519bddd7f6f6a5f4193dd0a1ca982fc41b248dec5fb3657d"
+    },
+    {
+      "path": "ads/v1/yubios-ad-leaderboard-728x90.png",
+      "size": 38186,
+      "git_sha": "b7faa18ae74560a0de79301f05e0c98d4c47cf96",
+      "sha256": "71c9b7ff8886942875b309cb6c098c75bf2318c0a9c69653bd950cc8976c7b4c"
+    },
+    {
+      "path": "ads/v1/yubios-ad-linux-penguin-banner-970x250.png",
+      "size": 211274,
+      "git_sha": "181d206bd50381b8411b470c4ea7c54b324e4451",
+      "sha256": "2d024b9e6d1e5b8d1a4dcd84bd19bc6c0ae739500e5d25ad682a0d7b445b27c7"
+    },
+    {
+      "path": "ads/v1/yubios-ad-medium-rectangle-300x250.png",
+      "size": 49889,
+      "git_sha": "a36dbb096684f0e0a62cf1e5c107536ca48e51e7",
+      "sha256": "887ccb76f51b55a184f8829965cefcb930195d1f38ea0742c11e258973e17cea"
+    },
+    {
+      "path": "ads/v1/yubios-ad-skyscraper-160x600.png",
+      "size": 53203,
+      "git_sha": "de9ef3243c7f6d0e10169bbb14687dac0ec872d4",
+      "sha256": "5396ab2c5c54f586fb8d3e9b10c3fb89775069c88baf6b7188e5865ee37dc196"
+    },
+    {
+      "path": "ads/v1/yubios-ad-square-1080x1080.png",
+      "size": 357821,
+      "git_sha": "34e752fdc60d5d44725c80ae7b55dde816acc182",
+      "sha256": "b1f33b73b5de0c9b1fdccdff7f37a913dffe61481600ced610b0532840366009"
+    },
+    {
+      "path": "ads/v2-upscaled/yubios-ad-landscape-2400x1256.png",
+      "size": 1879856,
+      "git_sha": "e753c18f6f9a525bbda734de18365833b696534a",
+      "sha256": "8421403a6a4ab59e3cb230bf857835d8ab78b59367f88583dea0b3916ad36bf8"
+    },
+    {
+      "path": "ads/v2-upscaled/yubios-ad-leaderboard-1456x180.png",
+      "size": 227392,
+      "git_sha": "79256acc1f844aae379c902693d275a55d515c12",
+      "sha256": "c634805ec3ce56d10937b4b56b89dd1e2e623f2e540484b7486de576bb732e69"
+    },
+    {
+      "path": "ads/v2-upscaled/yubios-ad-linux-penguin-banner-1940x500.png",
+      "size": 816478,
+      "git_sha": "ecdf960b978fe1a3242bcc1f79de472348068a25",
+      "sha256": "913fd752696d85dba65788e43a71de9615c33ba08cdce2cc99a0d7ef04d16714"
+    },
+    {
+      "path": "ads/v2-upscaled/yubios-ad-medium-rectangle-600x500.png",
+      "size": 266658,
+      "git_sha": "60d928d6ecbdea22bbc55ebb5d3c6210c3c8e6e5",
+      "sha256": "fd5c2bd3a3fd205660324b71ab4a09c42c8ad4c5df917d16476aab4b4c65c685"
+    },
+    {
+      "path": "ads/v2-upscaled/yubios-ad-skyscraper-320x1200.png",
+      "size": 333018,
+      "git_sha": "2da40d23b7fecc9a39e5533908047ece5fbef6b0",
+      "sha256": "90118236d04e521fc864c765ec8f4d4a3d3ead14e77819721f8ea4d0cfaa50f8"
+    },
+    {
+      "path": "ads/v2-upscaled/yubios-ad-square-2160x2160.png",
+      "size": 2948280,
+      "git_sha": "15b4751a13c92abd3a7f1b32d2223a4bc31698b0",
+      "sha256": "380481ba3bf25e7aa742d86421bed5a6d05ecaacdbfb963b8ec6a622bf455d13"
+    },
+    {
+      "path": "ads/v2/yubios-ad-landscape-1200x628.png",
+      "size": 665996,
+      "git_sha": "ac5d14278db89342f065a96bba49157250199969",
+      "sha256": "39b6ea1bf2848f9723fed09c4ca60bd63e552d589781835957a2580df7806d79"
+    },
+    {
+      "path": "ads/v2/yubios-ad-leaderboard-728x90.png",
+      "size": 64394,
+      "git_sha": "6259549f0d26d0dbe94d9ab6e5c610b63b1cbdb7",
+      "sha256": "f5b0d197bce5abfd78cbd589675f1350ce2bbf7b49ab4a1723819615a8dea52e"
+    },
+    {
+      "path": "ads/v2/yubios-ad-linux-penguin-banner-970x250.png",
+      "size": 228704,
+      "git_sha": "93de976da01476c94dce43f60997138e8318f01e",
+      "sha256": "0642e2c3003ae7893f0619aefa3b433e208052203e649fb055ffeb3df8b9602e"
+    },
+    {
+      "path": "ads/v2/yubios-ad-medium-rectangle-300x250.png",
+      "size": 77149,
+      "git_sha": "115dab24a900cab09a3bbd609893a043c4f9c695",
+      "sha256": "0f27564c22de2631b583dc37397ed4fba1cd209976a4b842ba7eba5905b2e00c"
+    },
+    {
+      "path": "ads/v2/yubios-ad-skyscraper-160x600.png",
+      "size": 94955,
+      "git_sha": "3bf76c83a681339b81fd565fac33946f34c3a7b0",
+      "sha256": "c3a99886a61b0517a91869797e180b7b70a4f6c348c53bdf26ac761e9a3e0aab"
+    },
+    {
+      "path": "ads/v2/yubios-ad-square-1080x1080.png",
+      "size": 1139113,
+      "git_sha": "42d4296e9694e9950cf712f9b0d97697df550bf0",
+      "sha256": "e3221a2ca28ec757f55c87756ef7834b17268a5b3f831e073460b5860c824fa3"
+    },
+    {
+      "path": "ci/vm-swtpm.conf",
+      "size": 1588,
+      "git_sha": "01aba0bc98841fa245eeaee06c1f8a18e0dcf25e",
+      "sha256": "7db3d17dcd7bee6ff7bf3b70e55485860d74d4c5d5f1d0993cfbf8b69a2ffd94"
+    },
+    {
+      "path": "generated-visuals.sha256",
+      "size": 3569,
+      "git_sha": "0c929ec84e4506a85c5bcbc370065ef7c14e4fa1",
+      "sha256": "32e29242b96c2708918e266936ab9db6fedcd1f93c83835ac99c400ea6f81fb0"
+    },
+    {
+      "path": "logo.png",
+      "size": 641630,
+      "git_sha": "97c4caa57aa62a56dec0d36480f93162a33e47ef",
+      "sha256": "3e826af98ee4d4ed9c8581b1645902270e03be1af4ba208d5ad27096100d7c68"
+    },
+    {
+      "path": "new_logo/README.md",
+      "size": 1573,
+      "git_sha": "96fc5cc798a754df4f4ee037814bc6789c2ae79e",
+      "sha256": "df9c0abae0a294bcb3ec02c5f79117030a7d79045c42699996bb7c43ed47eec8"
+    },
+    {
+      "path": "new_logo/yubios-linked-bloom-2048-dark.png",
+      "size": 4422670,
+      "git_sha": "4c1a5d89e68eebe321a99a6a32aa97dc43bd1f67",
+      "sha256": "fde87d91930c59db37c2020d0c263b80fc87a08f758b60e519e17d9bf80e5843"
+    },
+    {
+      "path": "new_logo/yubios-linked-bloom-2048-light.png",
+      "size": 3284184,
+      "git_sha": "b849182220e53c236d4dc6da54a5a864301ce9be",
+      "sha256": "c9c29e6cd2c9c91a0ea8acbd7c75550a1212b1431142e8e123c3dba7a0726fb5"
+    },
+    {
+      "path": "new_logo/yubios-linked-bloom-2048.png",
+      "size": 2922871,
+      "git_sha": "551cb228b1f571bb7aa65e3dd368315af9e4212b",
+      "sha256": "e5e43aba5476f401b1594bec9ae51645128576210cc103dc53ac2ed5c15a2471"
+    },
+    {
+      "path": "new_logo/yubios-owner-orbit-2048-dark.png",
+      "size": 4396213,
+      "git_sha": "9ff1f6618e66a813ff2d21967c564e9acb3d8a63",
+      "sha256": "35bd75421bc2a312065101849a11a1413e7a2e9dfe4e44eb027e475ab1bc3777"
+    },
+    {
+      "path": "new_logo/yubios-owner-orbit-2048-light.png",
+      "size": 4336670,
+      "git_sha": "814a8481944f555960d43b0b826088b1b3f55e1f",
+      "sha256": "e3e6387f53be0a97cdf3dcb6322c1e97ba153bbb30aaa4887a73255b3be8b586"
+    },
+    {
+      "path": "new_logo/yubios-owner-orbit-2048.png",
+      "size": 4172218,
+      "git_sha": "a10f446ef92e64e7128f9303464f81174e9696af",
+      "sha256": "351fc8cbeead6060506938dd5a3cae2c18f96878e6b04fd7d89f5f370e65ad15"
+    },
+    {
+      "path": "new_logo/yubios-trust-tree-2048-dark.png",
+      "size": 4387892,
+      "git_sha": "304fce90b6449c4f81244cae58de1f1ebd16ef3f",
+      "sha256": "9be43c371c605e3f068cbba63506c77c10a59db7236e53f2f82d3fd011d9da31"
+    },
+    {
+      "path": "new_logo/yubios-trust-tree-2048-light.png",
+      "size": 5125292,
+      "git_sha": "526b243c3077319582e14f3bb1261821a8f28315",
+      "sha256": "2e67810fba3623729f4efa3e7a6b722d84fb75746ad6b1df31a431715a34838d"
+    },
+    {
+      "path": "new_logo/yubios-trust-tree-2048.png",
+      "size": 4354374,
+      "git_sha": "9bbf2a3eefec6bb81e6693721245336074759de7",
+      "sha256": "b071cfbffcbe9e932d9414ac09a63cd415c51bd7c53286e8607bfd5fe6d40466"
+    },
+    {
+      "path": "upstream-contributor-bubbles.svg",
+      "size": 5558,
+      "git_sha": "9e0a41815aa99685251b26bef0a02aecf529c244",
+      "sha256": "283a99c2822c501668d0bdb15c708d371bea5caad498ce211dd011ecddffac1d"
+    },
+    {
+      "path": "visual-generation-prompts-2026-07-22.md",
+      "size": 20291,
+      "git_sha": "e951478dc57f8a0c9aa126ad4ebf6ca6bea461a0",
+      "sha256": "5c879150f45db0051eadd42403c6cba2a6699ab5d2cda9cfc230ac0617503919"
+    },
+    {
+      "path": "wallpapers/README.md",
+      "size": 1376,
+      "git_sha": "3c648382c546fad432cffefdc5d497e85a24ab9f",
+      "sha256": "5ed6f469b1dd5265a16ace843e13dec2574247f77f5740e0daf78f7b02f30672"
+    },
+    {
+      "path": "wallpapers/yubios-aurora-ridge-4k-dark.jpg",
+      "size": 1561168,
+      "git_sha": "9e35b27957c23664e6f407e79aa15a8ceea65f4f",
+      "sha256": "66f18832f11795a928f8ff05349582adfbdc18f97072d21bbd951c20d30a6078"
+    },
+    {
+      "path": "wallpapers/yubios-aurora-ridge-4k-light.jpg",
+      "size": 1679735,
+      "git_sha": "05706d5d979ac29b578319e272425321516ab49f",
+      "sha256": "ce082233ae1e3d160757d73b07580b2a4fb16f88f615d2f3a5be0b5374aebb36"
+    },
+    {
+      "path": "wallpapers/yubios-aurora-ridge-4k.jpg",
+      "size": 2207660,
+      "git_sha": "42e1756a2482cc58160b242c988c610e5083f29f",
+      "sha256": "a700d15d5fe5b217a027c7a2b196c13f27f1aace9a675874310020ceb1d4918f"
+    },
+    {
+      "path": "wallpapers/yubios-living-root-4k-dark.jpg",
+      "size": 2691790,
+      "git_sha": "8c1513fdc57593df475ad6a2faa82f3bcdac3dcb",
+      "sha256": "53d38686deb7495b56e79e52de9189bdc1eeebadb8ff7588f6b95d08c46f1c0e"
+    },
+    {
+      "path": "wallpapers/yubios-living-root-4k-light.jpg",
+      "size": 2682774,
+      "git_sha": "7df67001f740efa1f1929faf901463d76bd7de5b",
+      "sha256": "26b4e56be5eb862ff8e88f6ad3b060c5310046e9c7c84b587e4589ad6b8b1d28"
+    },
+    {
+      "path": "wallpapers/yubios-living-root-4k.jpg",
+      "size": 3216845,
+      "git_sha": "6ec7806fe8bc12db9578c4652e9155718d5a35f9",
+      "sha256": "569770d604325044cde95847752de6a0060085e45fce2ce037e38a872715beed"
+    },
+    {
+      "path": "wallpapers/yubios-nocturne-bands-4k-dark.jpg",
+      "size": 1636302,
+      "git_sha": "ac178c9deb0b3a6f7db32e3d6fe7b7cb56f37759",
+      "sha256": "d8b1b901690bb2b7e76ffa30c9ad675751585c3b135c28d135bfc63d50438cfb"
+    },
+    {
+      "path": "wallpapers/yubios-nocturne-bands-4k-light.jpg",
+      "size": 2486062,
+      "git_sha": "c78d8d1a710f1725e2391c29c2133a1dd5e88690",
+      "sha256": "6b605cd5a5991e0b2135edc7016841da93e72d68d6525f46953229ba2843c278"
+    },
+    {
+      "path": "wallpapers/yubios-nocturne-bands-4k.jpg",
+      "size": 2009818,
+      "git_sha": "875f7f7a5d012446c36241006ad9e719066ae709",
+      "sha256": "25829cea39a7ccb94ba93efc153e2f0b6d9a3d149a34f29aeaf641b07cbf5909"
+    },
+    {
+      "path": "wallpapers/yubios-owner-rings-4k-dark.jpg",
+      "size": 2339179,
+      "git_sha": "83f009fff3b21d612b5a69bbf034acc60d36404d",
+      "sha256": "c04458a3ab1c3b48b15d9781da5ae1eada680b03b23827ff79f3e57774dfc24a"
+    },
+    {
+      "path": "wallpapers/yubios-owner-rings-4k-light.jpg",
+      "size": 1786983,
+      "git_sha": "e618c0d1cbe80a8375ac41b7f1a036bdb174086e",
+      "sha256": "ebfeec5292887b3b9a7937037ef6a10523135bc53ffb013e03b45ebd8a37f18a"
+    },
+    {
+      "path": "wallpapers/yubios-owner-rings-4k.jpg",
+      "size": 2820425,
+      "git_sha": "e24ffbb8874a6808cf5c723d9660e7fef51cc960",
+      "sha256": "d7cd12941eee4d2f0738f670b1f02f278945b410fb164eefbb4c6658d6f58595"
+    },
+    {
+      "path": "yubiOS_Hardware_Sovereignty_Final.pdf",
+      "size": 14461488,
+      "git_sha": "42fb52a0cbb240cf3510b4ba970dc06f8b756fb1",
+      "sha256": "b61ff36da7f82d0d1af559e2430c03f4e998bfd2be196ee98367fd6170a60278"
+    },
+    {
+      "path": "yubiOS_Hardware_Sovereignty_Final.pptx",
+      "size": 16261872,
+      "git_sha": "6fe4443714a62d077dc792343ba5ae4a00fd2e41",
+      "sha256": "93532cb76f707a39c418f4ca935ac7623debbf0375ba415c3e20aaabcaf497e8"
+    },
+    {
+      "path": "yubiOS_slide_2.png",
+      "size": 3363311,
+      "git_sha": "a2dbac62f868cf481c7716113562d4285a930f31",
+      "sha256": "ffe9f44935e42638e50913e69cfccc7c83eda7b8575f216d35bc571be0a4e5f1"
+    }
+  ]
+}
