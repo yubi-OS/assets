@@ -1,0 +1,27 @@
+// yubiOS boot sound — "Trust Chain" (2026-09-30)
+// Composed with Strudel (strudel.cc), inspired by the OS startup-sound lineage:
+//   Windows startup/shutdown evolution: https://www.youtube.com/watch?v=reJbTyqa30Q
+//   Ubuntu startup & shutdown sounds:  https://www.youtube.com/watch?v=VNnSTli4oSQ
+// Structure maps the FIDO2-first boot chain: power -> verify -> trust -> confirmed.
+// The shipped WAV was rendered with strudel's offline renderer
+// (renderPatternAudio, OfflineAudioContext, 44100 Hz stereo) from this score.
+// Try it live: paste into https://strudel.cc/ and press Ctrl+Enter.
+
+setcpm(60) // 1 cycle = 1 second
+
+// 1. power-on hum: one low sine held across the whole boot (8s)
+$: note("[c2@16]/8").s("sine").attack(1).release(1).gain(.35)
+
+// 2. verification ladder: 8 ascending pentatonic bells, one per second
+//    (firmware -> kernel -> initrd -> rootfs -> services -> user session)
+$: n("[0 2 4 6 7 9 11 12]/8").scale("C4:major:pentatonic")
+  .s("triangle").attack(.01).release(1.2).room(.5).gain(.5)
+
+// 3. trust pad: warm chord resolving upward, low-pass filter opening
+$: note("[[c3,g3,c4] [g3,c4,e4] [c4,e4,g4] [c4,e4,g4] [c4,e4,g4] [e4,g4,c5] [c4,e4,g4,c5] [c4,e4,g4,c5]]/8")
+  .s("sawtooth").lpf("<900 1500 2200 2800 2800 3200 3400 3600>")
+  .attack(.7).release(1.6).room(.7).gain(.22)
+
+// 4. confirmation ding: single bell at second 6, long reverb tail
+//    (the root-of-trust-confirmed moment)
+$: note("[~ ~ ~ ~ ~ ~ g5 ~]/8").s("triangle").attack(.005).release(3).room(.9).gain(.6)
