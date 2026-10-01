@@ -27,8 +27,9 @@ where every layer is verified before it runs. The sound is that chain.
 
 ## Files
 
-- `yubios-boot-sound.wav` — the render (44100 Hz, stereo, 16-bit PCM, 10.0 s, peak 0.58, no clipping)
-- `yubios-boot-sound.mp3` — convenience encode (320 kbps)
+- `yubios-boot-sound-24b-192k.wav` — hi-res master (192000 Hz, stereo, 24-bit PCM, 10.0 s, peak 0.593, TPDF-dithered from the float32 render)
+- `yubios-boot-sound.wav` — compatibility render (44100 Hz, stereo, 16-bit PCM, 10.0 s, peak 0.58, no clipping)
+- `yubios-boot-sound.mp3` — convenience encode (320 kbps, encoded from the hi-res master)
 - `boot-sound.strudel` — the canonical score; paste into https://strudel.cc/ and press Ctrl+Enter to hear it live
 
 ## Provenance
@@ -44,7 +45,10 @@ where every layer is verified before it runs. The sound is that chain.
 
 ## Verification
 
-- Duration 10.00 s, 2ch, 44100 Hz, 16-bit PCM
-- Per-second RMS 0.09-0.15 (gentle build, peak at the pad open, quiet tail)
-- Dominant frequency climbs ~281 Hz → ~1328 Hz across the ladder (verified by
-  zero-crossing analysis per second)
+- Hi-res master: 10.000 s, 2ch, 192000 Hz, 24-bit PCM (11,520,044 bytes); dither verified to within 1 LSB of the ideal conversion
+- Per-second RMS 0.09-0.16 (gentle build, peak at the pad open, quiet tail)
+- Dominant frequency climbs ~269 Hz → ~1323 Hz across the ladder (verified by
+  zero-crossing analysis per second on the deinterleaved mono signal)
+- Rendered at full float32 precision via an OfflineAudioContext at 192 kHz
+  (strudel's built-in WAV export is 16-bit, so the 24-bit master was encoded
+  from the raw rendered AudioBuffer with TPDF dither)
