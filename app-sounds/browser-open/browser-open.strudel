@@ -1,0 +1,18 @@
+// yubiOS browser app-open sound — "Open Window" (2026-09-30)
+// Companion to the boot sound "Trust Chain": the trust-chain motif
+// (ascending bells on C major pentatonic) in miniature, for opening the
+// yubiOS browser (provenance-gated Chromium).
+// The shipped WAVs were rendered with strudel's offline renderer
+// (renderPatternAudio, OfflineAudioContext) from this score.
+// Try it live: paste into https://strudel.cc/ and press Ctrl+Enter.
+
+setcpm(120) // 1 cycle = 0.5s; the gesture spans 1.5s, tail rings out to ~2.7s
+
+// 1. two quick ascending bells: the trust-chain link (C5 -> G5, at 0.0s / 0.5s)
+$: note("[c5 g5 ~ ~ ~ ~ ~ ~]/8").s("triangle").attack(.005).release(.6).room(.5).gain(.55)
+
+// 2. soft low landing: the window settles (0.0s)
+$: note("[c3 ~ ~ ~ ~ ~ ~ ~]/8").s("sine").attack(.01).release(.35).gain(.45)
+
+// 3. sparkle at 1.0s: light high ping with long tail (the page is ready)
+$: note("[~ ~ g6 ~ ~ ~ ~ ~]/8").s("triangle").attack(.002).release(1.2).room(.85).gain(.4)
