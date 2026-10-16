@@ -1,0 +1,80 @@
+{
+ "name": "v3i",
+ "rows": [
+  [
+   "fractal_D",
+   1.5312,
+   1.28,
+   1.4,
+   false
+  ],
+  [
+   "fractal_r2",
+   0.9988,
+   0.98,
+   1.01,
+   true
+  ],
+  [
+   "complexity_slope",
+   -2.0232,
+   -2.05,
+   -1.94,
+   true
+  ],
+  [
+   "centroid_hz",
+   428.4737,
+   330,
+   460,
+   true
+  ],
+  [
+   "rolloff85_hz",
+   798.3675,
+   480,
+   660,
+   false
+  ],
+  [
+   "flatness",
+   0.0086,
+   0.002,
+   0.01,
+   true
+  ],
+  [
+   "spectral_beta",
+   2.6232,
+   2.0,
+   3.9,
+   true
+  ],
+  [
+   "dyn_range_db",
+   9.3151,
+   4,
+   35,
+   true
+  ],
+  [
+   "onset_per_s",
+   4.2,
+   1.5,
+   6.0,
+   true
+  ],
+  [
+   "fractal_verdict_on",
+   "off",
+   "on",
+   "on",
+   false
+  ]
+ ],
+ "listener": {
+  "warmth": 8.0,
+  "restraint": 8.0
+ },
+ "agreement": false
+}

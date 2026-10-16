@@ -1,0 +1,11 @@
+cand      AM2 pass  fails
+v2i         4/9     D=1.5099, comp=-2.0182, flat=0.0029, beta=2.9056, dyn=4.6539   (fractal verdict off, not gated)
+v3a         4/9     D=1.5520, comp=-2.0159, flat=0.0031, beta=2.8983, dyn=4.9638   (fractal verdict off, not gated)
+v3b         5/9     D=1.5148, comp=-2.0251, flat=0.0109, dyn=5.7338   (fractal verdict off, not gated)
+v3c         4/9     D=1.5767, comp=-2.0151, flat=0.0029, beta=2.9295, dyn=4.9461   (fractal verdict off, not gated)
+v3d         3/9     D=1.4998, comp=-2.0190, centroid=311.5200, flat=0.0030, beta=2.9618, dyn=4.6182   (fractal verdict on, not gated)
+v3e         5/9     D=1.5726, comp=-2.0064, flat=0.0025, beta=3.1065   (fractal verdict off, not gated)
+v3f         6/9     D=1.5583, comp=-2.0134, beta=2.8919   (fractal verdict off, not gated)
+v3g         6/9     D=1.5321, comp=-2.0250, flat=0.0094   (fractal verdict off, not gated)
+v3h         6/9     D=1.5531, comp=-2.0224, beta=2.6888   (fractal verdict off, not gated)
+v3i         7/9     D=1.5312, comp=-2.0232   (fractal verdict off, not gated)
