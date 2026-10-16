@@ -1,0 +1,35 @@
+// yubiOS boot sound v4h: sectional dynamism. Sparse opening, build, a breath at second 6, then a full, bright cadence with a low root
+setcpm(60) // 1 cycle = 1 second, 10 s total
+
+// 0a. air: white noise high-passed, ramping up, cut for the breath
+$: s("white").hpf(400).gain("<.07 .08 .09 .10 .11 .02 .13 .14>")
+
+// 0b. warm air: pink noise swelling with the build
+$: s("pink").hpf(60).room(.4).gain("<.03 .05 .07 .09 .11 .01 .15 .17>")
+
+// 0c. kick: one soft sine thump per second, out for the breath
+$: note("~ c1").s("sine").attack(.001).decay(.18).sustain(0).release(.05).lpf(220).gain("<.04 .08 .12 .16 .22 0 .28 .30>")
+
+// 1. power-on hum: sparse opening, low root held under the first seconds
+$: note("[c2@16]/8").s("sine").attack(1.4).release(1.8).gain("<.16 .16 .14 .12 .10 .05 .14 .10>")
+
+// 2. verification ladder: bells, two per second, brighter and louder, silent in the breath
+$: n("[0 2 4 6 7 9 11 12]*2/8").scale("C4:minor:pentatonic")
+  .s("triangle").attack(.005).release(.9).lpf("<900 1000 1200 1400 1600 1800 2000 2200>").room(.6)
+  .gain("<.08 .14 .20 .26 .32 .02 .42 .48>")
+
+// 2b. accent layer: one sustained bell per second, the breath stays empty
+$: n("<0 4 0 7 0 4 7 9>").scale("C4:minor:pentatonic")
+  .s("triangle").attack(.01).release(1.4).lpf(1200).room(.7)
+  .gain("<.08 .14 .20 .28 .34 .02 .44 .50>")
+
+// 3. trust pad: sparse, opens, breathes at second 6, then G7 and Cmaj9 at full brightness
+$: note("[[c3,eb3,g3,bb3,d4] [c3,eb3,g3,bb3,d4] [ab2,c3,eb3,g3] [ab2,c3,eb3,g3] [f3,ab3,c4,eb4,g4] [f3,ab3,c4,eb4,g4] [g2,b2,d3,f3,a3] [c3,e3,g3,b3,d4]]/8")
+  .s("sawtooth").lpf("<340 420 520 640 780 300 1100 1600>")
+  .attack(.7).release(1.6).room(.7).gain("<.03 .06 .09 .13 .18 .01 .34 .46>")
+
+// 4. resolution: a low C under the final chord
+$: note("~ ~ ~ ~ ~ ~ ~ c2").s("sine").attack(.01).release(2.2).gain(.30)
+
+// 5. arrival: confirmation bell on the last second, with a high octave
+$: note("[~ ~ ~ ~ ~ ~ ~ [c5,g5]]/8").s("triangle").attack(.005).release(3.2).room(.9).lpf(2400).gain(.55)

@@ -1,0 +1,24 @@
+{
+ "pipeline": "edge-standard-v1",
+ "meta": {
+  "pipeline": "edge-standard-v1",
+  "chosen_threshold": 170,
+  "achieved_coverage": 0.060352325439453125,
+  "n_components_traced": 42,
+  "traced_pixels": 7770,
+  "w": 512,
+  "h": 512,
+  "under_inked": false
+ },
+ "features": {
+  "fractal_band": {
+   "D": 1.5843019730757737,
+   "r2": 0.9991568913295629
+  },
+  "symmetry_present": {
+   "score": 0.2072072072072072,
+   "axis": "vertical"
+  }
+ },
+ "run_id": "cr_d069b236a73c12de"
+}
