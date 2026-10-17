@@ -1,0 +1,12 @@
+cand      AM2 pass  fails
+v4h         6/9     D=1.5843, comp=-1.9984, beta=2.8742   (fractal verdict off, not gated)
+v4h_r2 NA [Errno 2] No such file or directory: 'features/v4h_r2.json'
+v5b         6/9     D=1.4304, comp=-1.9965, beta=2.6847   (fractal verdict on, not gated)
+v5c         5/9     D=1.6290, comp=-1.9942, dyn=16.8532, ons=4.6000   (fractal verdict off, not gated)
+v5d         6/9     D=1.5928, comp=-1.9928, dyn=17.0976   (fractal verdict off, not gated)
+v5d_r2      6/9     D=1.5903, comp=-1.9937, dyn=17.7508   (fractal verdict off, not gated)
+v5e         7/9     D=1.5936, comp=-1.9949   (fractal verdict off, not gated)
+v5f         6/9     D=1.6082, comp=-1.9953, dyn=17.4888   (fractal verdict off, not gated)
+v5f_r2      6/9     D=1.5875, comp=-1.9940, dyn=17.1851   (fractal verdict off, not gated)
+v5f_r3      6/9     D=1.6046, comp=-1.9944, dyn=17.5496   (fractal verdict off, not gated)
+v5g         5/9     D=1.6102, comp=-1.9969, dyn=17.8396, ons=4.6000   (fractal verdict off, not gated)
