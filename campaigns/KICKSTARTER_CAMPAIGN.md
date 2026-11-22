@@ -6,6 +6,7 @@
 > - **Category:** `Technology` -> `Hardware` (Secondary tag: `Open-Source Software`)
 > - **Project Location:** `Los Angeles, CA`
 > - **Primary Campaign Image:** `https://raw.githubusercontent.com/yubi-OS/assets/main/ads/yubiOS_Technical_Preview.jpg` (`ads/yubiOS_Technical_Preview.jpg`)
+> - **Primary Campaign Video (90.0s 1080p MP4):** [`assets/yubios-kickstarter-hero.mp4`](assets/yubios-kickstarter-hero.mp4) (`https://raw.githubusercontent.com/yubi-OS/assets/main/campaigns/assets/yubios-kickstarter-hero.mp4`)
 > - **Proof-of-Life Video / Asciicast:** `https://asciinema.org/a/y9sHQPQTIbTWNIyr`
 > - **Funding Goal (Phase 1 All-or-Nothing):** `$10,000 USD`
 > - **Campaign Duration:** `30 Days`

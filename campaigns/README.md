@@ -45,8 +45,11 @@ Both campaigns share one disciplined, two-stage funding structure aimed at **Glo
 | [`assets/04-globalplatform-tee-certification-1360x520.png`](assets/04-globalplatform-tee-certification-1360x520.png) | Section 4 banner: Two-Stage GlobalPlatform TEE Certification funding model ($10k Phase 1 Lab Pre-Test -> ~$100k Phase 2 Full Certification). |
 | [`assets/05-roadmap-to-completion-1360x560.png`](assets/05-roadmap-to-completion-1360x560.png) | Section 5 banner: 4-stage engineering, hardware fulfillment, and GlobalPlatform TEE certification roadmap. |
 | [`assets/06-reward-tiers-1360x580.png`](assets/06-reward-tiers-1360x580.png) | Section 6 banner: Visual summary of all 5 contribution tiers ($25 to $749). |
+| [`assets/yubios-kickstarter-hero.mp4`](assets/yubios-kickstarter-hero.mp4) | 90.0-second (`1920x1080`, `30 fps`, `yuv420p` TV-range) Kickstarter & GoFundMe hero video with `yubios-boot-sound-v5.mp3` + `yubios-browser-open.mp3` + 22-track audio mix. |
+| [`assets/yubios-kickstarter-hero-poster.jpg`](assets/yubios-kickstarter-hero-poster.jpg) | Poster frame (`1920x1080`, baked at frame 0 of `yubios-kickstarter-hero.mp4`). |
+| [`video/`](video/av-plan.md) | Editable `av-composer` source (`av-plan.md`, `av-brief.md`, `share-copy.txt`, `composition/index.html`, `composition/audio-manifest.json`). |
 | [`source/render_campaign_assets.py`](source/render_campaign_assets.py) | Deterministic SVG-to-PNG renderer using `chrome-headless-shell` and the canonical `logo.png`. |
-| [`SHA256SUMS`](SHA256SUMS) | SHA-256 checksums for every rendered PNG and SVG source file. |
+| [`SHA256SUMS`](SHA256SUMS) | SHA-256 checksums for every rendered PNG, MP4, JPG, HTML, and SVG source file. |
 
 ---
 

@@ -1,0 +1,1 @@
+Back yubiOS Phase 1 ($10,000 Accredited TEE Lab Pre-Testing): get early access to a remotely attested Assured Node or a pre-installed Radxa ROCK 5B (RK3588) / RockPro64 (RK3399) bound to your own U2F/HSM, with x86-64 UEFI Setup-Mode support and full proof of life at https://asciinema.org/a/y9sHQPQTIbTWNIyr.

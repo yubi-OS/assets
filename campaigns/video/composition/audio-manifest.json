@@ -1,0 +1,160 @@
+[
+  {
+    "src": "assets/music/vol12.mp3",
+    "start": 0,
+    "duration": 90,
+    "track": 10,
+    "volume": 0.26,
+    "fadeOut": {
+      "start": 87.5,
+      "dur": 2.5
+    }
+  },
+  {
+    "src": "assets/music/yubios-boot-sound-v5.mp3",
+    "start": 0,
+    "duration": 10,
+    "track": 11,
+    "volume": 0.65
+  },
+  {
+    "src": "assets/sfx/bell0.ogg",
+    "start": 0.56,
+    "duration": 2,
+    "track": 12,
+    "volume": 0.65
+  },
+  {
+    "src": "assets/sfx/switch1.ogg",
+    "start": 10,
+    "duration": 1,
+    "track": 13,
+    "volume": 0.7
+  },
+  {
+    "src": "assets/sfx/drop1.ogg",
+    "start": 10.93,
+    "duration": 1,
+    "track": 14,
+    "volume": 0.65
+  },
+  {
+    "src": "assets/sfx/select8.ogg",
+    "start": 13.11,
+    "duration": 1,
+    "track": 15,
+    "volume": 0.65
+  },
+  {
+    "src": "assets/sfx/bell3.ogg",
+    "start": 21,
+    "duration": 2,
+    "track": 16,
+    "volume": 0.7
+  },
+  {
+    "src": "assets/sfx/key1.wav",
+    "start": 23,
+    "duration": 0.5,
+    "track": 17,
+    "volume": 0.75
+  },
+  {
+    "src": "assets/sfx/key3.wav",
+    "start": 25.5,
+    "duration": 0.5,
+    "track": 18,
+    "volume": 0.75
+  },
+  {
+    "src": "assets/sfx/key5.wav",
+    "start": 28,
+    "duration": 0.5,
+    "track": 19,
+    "volume": 0.75
+  },
+  {
+    "src": "assets/sfx/select8.ogg",
+    "start": 30.5,
+    "duration": 0.8,
+    "track": 20,
+    "volume": 0.75
+  },
+  {
+    "src": "assets/sfx/bong1.ogg",
+    "start": 33,
+    "duration": 1.2,
+    "track": 21,
+    "volume": 0.8
+  },
+  {
+    "src": "assets/sfx/yubios-browser-open.mp3",
+    "start": 36,
+    "duration": 4,
+    "track": 22,
+    "volume": 0.62
+  },
+  {
+    "src": "assets/sfx/drop1.ogg",
+    "start": 39.5,
+    "duration": 1,
+    "track": 23,
+    "volume": 0.65
+  },
+  {
+    "src": "assets/sfx/switch1.ogg",
+    "start": 47,
+    "duration": 1,
+    "track": 24,
+    "volume": 0.7
+  },
+  {
+    "src": "assets/sfx/select8.ogg",
+    "start": 49.5,
+    "duration": 1,
+    "track": 25,
+    "volume": 0.65
+  },
+  {
+    "src": "assets/sfx/bell0.ogg",
+    "start": 59,
+    "duration": 2,
+    "track": 26,
+    "volume": 0.7
+  },
+  {
+    "src": "assets/sfx/bong1.ogg",
+    "start": 64.5,
+    "duration": 1.2,
+    "track": 27,
+    "volume": 0.7
+  },
+  {
+    "src": "assets/sfx/switch1.ogg",
+    "start": 71,
+    "duration": 1,
+    "track": 28,
+    "volume": 0.7
+  },
+  {
+    "src": "assets/sfx/select8.ogg",
+    "start": 75,
+    "duration": 1,
+    "track": 29,
+    "volume": 0.65
+  },
+  {
+    "src": "assets/sfx/bell3.ogg",
+    "start": 81,
+    "duration": 2,
+    "track": 30,
+    "volume": 0.75
+  },
+  {
+    "src": "assets/sfx/bong1.ogg",
+    "start": 85,
+    "duration": 1.2,
+    "track": 31,
+    "volume": 0.75
+  }
+]

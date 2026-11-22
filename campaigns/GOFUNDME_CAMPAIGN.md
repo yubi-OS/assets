@@ -6,6 +6,7 @@
 > - **Location / Currency:** `Los Angeles, CA (90001)` · `USD ($)`
 > - **Who are you fundraising for?** `Yourself` (yubi-OS Open-Source Project / Accredited Lab Testing & Hardware Provisioning)
 > - **Primary Cover Image:** `https://raw.githubusercontent.com/yubi-OS/assets/main/ads/yubiOS_Technical_Preview.jpg` (`ads/yubiOS_Technical_Preview.jpg`)
+> - **Campaign Walkthrough Video (90.0s 1080p MP4):** [`assets/yubios-kickstarter-hero.mp4`](assets/yubios-kickstarter-hero.mp4) (`https://raw.githubusercontent.com/yubi-OS/assets/main/campaigns/assets/yubios-kickstarter-hero.mp4`)
 > - **Proof-of-Life Asciinema:** `https://asciinema.org/a/y9sHQPQTIbTWNIyr`
 > - **Initial Fundraising Goal (Phase 1):** `$10,000 USD` (Flexible Funding; precedes Phase 2 `~$100,000` full GlobalPlatform TEE certification campaign)
 

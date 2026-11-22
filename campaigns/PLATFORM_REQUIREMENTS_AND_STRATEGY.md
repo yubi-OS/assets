@@ -17,7 +17,7 @@ Kickstarter enforces strict review gates on campaigns in the **Technology -> Har
 | **Category** | Primary + Subcategory | `Technology` -> `Hardware` (with `Open-Source Software` tag) |
 | **Project Location** | City, State, Country of legal entity / bank account | `Los Angeles, CA, USA` |
 | **Project Image (Primary)** | `16:9` ratio (`1024x576` min, `1920x1080` ideal); JPEG/PNG `< 50 MB` | `ads/yubiOS_Technical_Preview.jpg` (`https://raw.githubusercontent.com/yubi-OS/assets/main/ads/yubiOS_Technical_Preview.jpg`) |
-| **Project Video** | Optional but strongly recommended (`16:9` MP4/MOV); must show real working hardware, no photorealistic CGI | 90-second walkthrough combining the live Radxa ROCK 5B asciinema (`https://asciinema.org/a/y9sHQPQTIbTWNIyr`), HDMI/UART dual-console capture, and GNOME Wayland + Antimony v156 desktop |
+| **Project Video** | Optional but strongly recommended (`16:9` MP4/MOV); must show real working hardware, no photorealistic CGI | Rendered 90.0s walkthrough ([`assets/yubios-kickstarter-hero.mp4`](assets/yubios-kickstarter-hero.mp4)) combining the live Radxa ROCK 5B asciinema (`https://asciinema.org/a/y9sHQPQTIbTWNIyr`), HDMI/UART dual-console capture, GNOME Wayland + Antimony v156 desktop, and `yubios-boot-sound-v5.mp3` |
 | **Funding Goal** | All-or-Nothing threshold; creator receives `$0` if missed | `$10,000 USD` (Phase 1 Accredited 3rd-Party TEE Lab Pre-Testing & Hardware Gate) |
 | **Campaign Duration** | `1` to `60` days (`30` days recommended by Kickstarter) | `30 days` |
 | **Platform & Payment Fees** | `5%` Kickstarter fee + `~3-5%` Stripe payment processing (`~8-10%` total) | Net proceeds at `$10,000` goal: `~$9,050-$9,200` (accounted for in budget table) |
