@@ -45,11 +45,15 @@ Both campaigns share one disciplined, two-stage funding structure aimed at **Glo
 | [`assets/04-globalplatform-tee-certification-1360x520.png`](assets/04-globalplatform-tee-certification-1360x520.png) | Section 4 banner: Two-Stage GlobalPlatform TEE Certification funding model ($10k Phase 1 Lab Pre-Test -> ~$100k Phase 2 Full Certification). |
 | [`assets/05-roadmap-to-completion-1360x560.png`](assets/05-roadmap-to-completion-1360x560.png) | Section 5 banner: 4-stage engineering, hardware fulfillment, and GlobalPlatform TEE certification roadmap. |
 | [`assets/06-reward-tiers-1360x580.png`](assets/06-reward-tiers-1360x580.png) | Section 6 banner: Visual summary of all 5 contribution tiers ($25 to $749). |
-| [`assets/yubios-kickstarter-hero.mp4`](assets/yubios-kickstarter-hero.mp4) | 90.0-second (`1920x1080`, `30 fps`, `yuv420p` TV-range) Kickstarter & GoFundMe hero video with `yubios-boot-sound-v5.mp3` + `yubios-browser-open.mp3` + 22-track audio mix. |
+| [`assets/yubios-kickstarter-hero.mp4`](assets/yubios-kickstarter-hero.mp4) | 90.0-second (`1920x1080`, `30 fps`, `yuv420p` TV-range) Kickstarter & GoFundMe hero video with custom `yubios-campaign-score-90s.mp3` (`boot-sound-v5` Strudel progression) + `yubios-boot-sound-v5.mp3` + `yubios-browser-open.mp3`. |
 | [`assets/yubios-kickstarter-hero-poster.jpg`](assets/yubios-kickstarter-hero-poster.jpg) | Poster frame (`1920x1080`, baked at frame 0 of `yubios-kickstarter-hero.mp4`). |
-| [`video/`](video/av-plan.md) | Editable `av-composer` source (`av-plan.md`, `av-brief.md`, `share-copy.txt`, `composition/index.html`, `composition/audio-manifest.json`). |
+| [`assets/yubios-kickstarter-square.mp4`](assets/yubios-kickstarter-square.mp4) | 25.0-second (`1080x1080`, `30 fps`, `yuv420p` TV-range) square social cut for X, LinkedIn, and Hacker News launch seeding with custom `yubios-campaign-score-25s.mp3`. |
+| [`assets/yubios-kickstarter-square-poster.jpg`](assets/yubios-kickstarter-square-poster.jpg) | Poster frame (`1080x1080`, baked at frame 0 of `yubios-kickstarter-square.mp4`). |
+| [`video/`](video/av-plan.md) | Editable `av-composer` 16:9 90s source (`av-plan.md`, `av-brief.md`, `share-copy.txt`, `composition/index.html`, `composition/audio-manifest.json`). |
+| [`video-square/`](video-square/av-plan.md) | Editable `av-composer` 1:1 25s square source (`av-plan.md`, `av-brief.md`, `share-copy.txt`, `composition/index.html`, `composition/audio-manifest.json`). |
+| [`source/yubios-campaign-score.strudel`](source/yubios-campaign-score.strudel) & [`source/render_yubios_score.py`](source/render_yubios_score.py) | Custom Strudel score (`Am9 -> Fmaj9 -> G13 -> Cmaj9` / `Dm9 -> Em7 -> Fmaj7#11 -> G13`) and deterministic 44.1 kHz stereo synthesizer. |
 | [`source/render_campaign_assets.py`](source/render_campaign_assets.py) | Deterministic SVG-to-PNG renderer using `chrome-headless-shell` and the canonical `logo.png`. |
-| [`SHA256SUMS`](SHA256SUMS) | SHA-256 checksums for every rendered PNG, MP4, JPG, HTML, and SVG source file. |
+| [`SHA256SUMS`](SHA256SUMS) | SHA-256 checksums for every rendered PNG, MP4, JPG, HTML, Strudel, and SVG source file. |
 
 ---
 

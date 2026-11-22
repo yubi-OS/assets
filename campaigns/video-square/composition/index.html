@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>yubiOS 25s Square Social Cut (1080x1080)</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1080px;
+    height: 1080px;
+    overflow: hidden;
+    background: #040511;
+    color: #faf6ff;
+    font-family: Inter, 'Liberation Sans', 'DejaVu Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  #root {
+    position: relative;
+    width: 1080px;
+    height: 1080px;
+    overflow: hidden;
+    background: radial-gradient(circle at 80% 15%, rgba(255,42,157,0.18) 0%, rgba(168,85,247,0.09) 35%, rgba(4,5,17,1) 72%);
+  }
+  #bg-canvas {
+    position: absolute;
+    inset: 0;
+    width: 1080px;
+    height: 1080px;
+    z-index: 1;
+  }
+  .grid-overlay {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 2;
+  }
+
+  /* Header Bar */
+  #topbar {
+    position: absolute;
+    top: 24px;
+    left: 36px;
+    right: 36px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background: rgba(14, 12, 32, 0.9);
+    border: 1.5px solid rgba(255, 42, 157, 0.5);
+    border-radius: 16px;
+    z-index: 20;
+  }
+  .brand-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .brand-logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    border: 1.5px solid rgba(255, 84, 180, 0.7);
+  }
+  .brand-name {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.7px;
+    color: #fff;
+  }
+  .status-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 14px;
+    border-radius: 999px;
+    background: rgba(25, 16, 46, 0.95);
+    border: 1.5px solid rgba(83, 213, 250, 0.55);
+    font-family: 'JetBrains Mono', 'Liberation Mono', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    color: #faf6ff;
+  }
+  .status-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #89ff35;
+    box-shadow: 0 0 8px #89ff35;
+  }
+
+  .scene {
+    position: absolute;
+    top: 104px;
+    left: 36px;
+    right: 36px;
+    bottom: 82px;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 999px;
+    background: rgba(255, 42, 157, 0.16);
+    border: 1px solid rgba(255, 42, 157, 0.65);
+    color: #ff7ac6;
+    font-family: 'JetBrains Mono', 'Liberation Mono', monospace;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  .h1-sq {
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1.04;
+    letter-spacing: -1.6px;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  .h1-grad {
+    background: linear-gradient(90deg, #ff2a9d 0%, #c084fc 52%, #53d5fa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .glass-card {
+    background: linear-gradient(180deg, rgba(20, 18, 44, 0.95) 0%, rgba(10, 9, 25, 0.98) 100%);
+    border: 2px solid rgba(255, 42, 157, 0.55);
+    border-radius: 18px;
+    padding: 18px 22px;
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.65);
+  }
+  .img-frame {
+    border-radius: 18px;
+    border: 2px solid rgba(255, 42, 157, 0.6);
+    overflow: hidden;
+    background: #050612;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .img-frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #050612;
+  }
+
+  /* Bottom Bar */
+  #bottombar {
+    position: absolute;
+    left: 36px;
+    right: 36px;
+    bottom: 20px;
+    height: 46px;
+    background: rgba(12, 11, 28, 0.92);
+    border: 1.5px solid rgba(63, 58, 90, 0.8);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    z-index: 20;
+  }
+  .progress-wrap {
+    width: 240px;
+    height: 7px;
+    background: #1b1830;
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  #progress-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #ff2a9d, #53d5fa, #89ff35);
+  }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="root" data-start="0" data-duration="25" data-width="1080" data-height="1080">
+  <canvas id="bg-canvas" width="1080" height="1080"></canvas>
+  <div class="grid-overlay"></div>
+
+  <div id="topbar">
+    <div class="brand-left">
+      <img class="brand-logo" src="assets/images/logo.png" alt="yubiOS"/>
+      <span class="brand-name">yubiOS</span>
+      <span style="font-family:monospace; font-size:12.5px; color:#d7cee6; font-weight:700;">• FIDO2-FIRST IMMUTABLE LINUX®</span>
+    </div>
+    <div class="status-pill">
+      <span class="status-dot"></span>
+      <span>$10K TEE LAB CAMPAIGN</span>
+    </div>
+  </div>
+
+  <!-- SCENE 1 (0.0s - 6.0s): Hero & Trust Boundaries -->
+  <div id="scene1" class="scene" style="opacity:1; visibility:visible; display:flex; flex-direction:column; justify-content:space-between;">
+    <div>
+      <div class="eyebrow">TECHNICAL PREVIEW v0.8.94 • KICKSTARTER &amp; GOFUNDME</div>
+      <div class="h1-sq">ASSUME NOTHING. <span class="h1-grad">PROVE EVERYTHING.</span></div>
+      <div style="font-size:20px; color:#dcd4ec;">Your physical U2F/HSM signs UEFI Secure Boot, decrypts LUKS2 &amp; ext4 homed, and attests your node.</div>
+    </div>
+    <div id="s1-hero" class="img-frame" style="width:1008px; height:520px;">
+      <img src="assets/images/yubiOS_Technical_Preview.jpg" alt="yubiOS Technical Preview"/>
+    </div>
+    <div id="s1-grid" style="display:grid; grid-template-columns: repeat(4, 1fr); gap:12px;">
+      <div class="glass-card" style="padding:12px 14px; border-color:#ff2a9d;">
+        <div style="font-family:monospace; font-size:11px; color:#ff7ac6; font-weight:700;">01 • SECURE BOOT</div>
+        <div style="font-size:14.5px; font-weight:800; margin-top:3px;">PIV Slot 9a UKI</div>
+      </div>
+      <div class="glass-card" style="padding:12px 14px; border-color:#53d5fa;">
+        <div style="font-family:monospace; font-size:11px; color:#7ce2ff; font-weight:700;">02 • DISK &amp; HOME</div>
+        <div style="font-size:14.5px; font-weight:800; margin-top:3px;">LUKS2 + ext4 homed</div>
+      </div>
+      <div class="glass-card" style="padding:12px 14px; border-color:#a855f7;">
+        <div style="font-family:monospace; font-size:11px; color:#d8b4fe; font-weight:700;">03 • SSH &amp; SUDO</div>
+        <div style="font-size:14.5px; font-weight:800; margin-top:3px;">ed25519-sk + pam-u2f</div>
+      </div>
+      <div class="glass-card" style="padding:12px 14px; border-color:#89ff35;">
+        <div style="font-family:monospace; font-size:11px; color:#89ff35; font-weight:700;">04 • ARM64 TEE</div>
+        <div style="font-size:14.5px; font-weight:800; margin-top:3px;">OP-TEE 4.11 fTPM</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCENE 2 (6.0s - 12.5s): Live ROCK 5B 5-Step Hardware Enrollment Proof of Life -->
+  <div id="scene2" class="scene" style="display:flex; flex-direction:column; justify-content:space-between;">
+    <div>
+      <div class="eyebrow" style="border-color:#89ff35; color:#89ff35;">PROOF OF LIFE • asciinema.org/a/y9sHQPQTIbTWNIyr</div>
+      <div class="h1-sq" style="font-size:42px;">5-Step U2F/HSM Enrollment on Radxa ROCK 5B</div>
+    </div>
+    <div id="s2-term" class="glass-card" style="background:#05060f; border-color:#53d5fa; padding:18px 22px; font-family:'JetBrains Mono','Liberation Mono',monospace; font-size:14.2px; line-height:1.62;">
+      <div style="color:#97a0c4; font-size:12px; margin-bottom:8px; border-bottom:1px solid #262b4c; padding-bottom:6px;">
+        ● ttyS2 + tty1 (YUBIOS_DUAL_CONSOLE_MUX) • refs/logs/fvf13-224bf224.new (5,622 lines)
+      </div>
+      <div id="sq-l1" style="color:#53d5fa;">[boot] BL31: v2.15.0(release):yubiOS | OP-TEE 4.11 (fTPM + StMM) -&gt; YUBIOS_TPM_OK</div>
+      <div id="sq-l2" style="color:#89ff35; font-weight:700;">[1/5] yubiOS-enroll-sb   : PIV Slot 9a PK/KEK/db -&gt; StMM (SetupMode: 1 -&gt; 0)</div>
+      <div id="sq-l3" style="color:#89ff35; font-weight:700;">[2/5] yubiOS-enroll-luks : /dev/mmcblk1p3 (110.6G) LUKS2 FIDO2 hmac-secret</div>
+      <div id="sq-l4" style="color:#89ff35; font-weight:700;">[3/5] yubiOS-enroll-homed: /var/home/yubios.home (103.6G LUKS2 + ext4 FIDO2)</div>
+      <div id="sq-l5" style="color:#89ff35; font-weight:700;">[4/5] yubiOS-enroll-ssh  : Generated hardware-resident OpenSSH ed25519-sk key</div>
+      <div id="sq-l6" style="color:#89ff35; font-weight:700;">[5/5] yubiOS-enroll-pam  : Registered /etc/yubico/u2f_keys (pam-u2f touch)</div>
+      <div id="sq-l7" style="color:#ff7ac6; font-weight:700;">[reboot] secureboot: Secure boot enabled | Kernel locked down | YUBIOS_TPM_OK</div>
+    </div>
+    <div style="display:grid; grid-template-columns: 520px 468px; gap:20px; height:360px;">
+      <div class="img-frame" style="border-color:#a855f7;">
+        <img src="assets/images/firstlook-gnome.jpg" alt="GNOME Wayland Desktop"/>
+      </div>
+      <div class="glass-card" style="border-color:#ff2a9d; display:flex; flex-direction:column; justify-content:center; gap:10px;">
+        <div style="font-family:monospace; color:#ff7ac6; font-size:12.5px; font-weight:700;">BOOTED DESKTOP • fvf14-a76322cd.new</div>
+        <div style="font-size:24px; font-weight:900;">GNOME Wayland + Antimony v156</div>
+        <div style="font-size:15px; color:#d7cee6; line-height:1.45;">
+          Ships with checksum-pinned <b>Antimony Browser v156</b> (engine-layer C2PA provenance gating) and <b>ADR-034</b> automatic local OCI UKI re-signing.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCENE 3 (12.5s - 19.0s): Pre-Installed Boards, x86 Setup Mode & GlobalPlatform TEE Cert -->
+  <div id="scene3" class="scene" style="display:flex; flex-direction:column; justify-content:space-between;">
+    <div>
+      <div class="eyebrow" style="border-color:#53d5fa; color:#7ce2ff;">HARDWARE + GLOBALPLATFORM TEE CERTIFICATION</div>
+      <div class="h1-sq" style="font-size:41px;">Pre-Installed ARM64, x86 Setup Mode &amp; TEE Lab Testing</div>
+    </div>
+    <div id="s3-hw" style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+      <div class="glass-card" style="border-color:#ff2a9d; padding:18px 20px;">
+        <div style="font-family:monospace; color:#89ff35; font-size:12px; font-weight:700;">● FLAGSHIP PRE-INSTALLED ($399)</div>
+        <div style="font-size:24px; font-weight:900; margin:4px 0;">Radxa ROCK 5B (RK3588, 16 GB)</div>
+        <div style="font-size:14.5px; color:#d7cee6;">128GB microSD + OP-TEE 4.11 fTPM/StMM + GNOME + Antimony + 90d Assured Node.</div>
+      </div>
+      <div class="glass-card" style="border-color:#a855f7; padding:18px 20px;">
+        <div style="font-family:monospace; color:#89ff35; font-size:12px; font-weight:700;">● SOVEREIGN NODE PRE-INSTALLED ($249)</div>
+        <div style="font-size:24px; font-weight:900; margin:4px 0;">Pine64 RockPro64 (RK3399, 4 GB)</div>
+        <div style="font-size:14.5px; color:#d7cee6;">64GB microSD + TF-A/OP-TEE/U-Boot UEFI + yubios-attest + 30d Assured Node.</div>
+      </div>
+      <div class="glass-card" style="border-color:#53d5fa; padding:18px 20px;">
+        <div style="font-family:monospace; color:#53d5fa; font-size:12px; font-weight:700;">● EXPANDING TO PC &amp; SERVER ($25+)</div>
+        <div style="font-size:24px; font-weight:900; margin:4px 0;">x86-64 UEFI Setup Mode</div>
+        <div style="font-size:14.5px; color:#d7cee6;">Enroll your U2F/HSM Slot 9a PK/KEK/db keys on x86 machines without custom firmware.</div>
+      </div>
+      <div class="glass-card" style="border-color:#64748b; padding:18px 20px;">
+        <div style="font-family:monospace; color:#fbbf24; font-size:12px; font-weight:700;">● MOBILE TABLET R&amp;D (OMN-167)</div>
+        <div style="font-size:24px; font-weight:900; margin:4px 0;">Pine64 PineTab2 (RK3566)</div>
+        <div style="font-size:14.5px; color:#d7cee6;">CI firmware target built; active UART/USB-boot investigation before hardware sales.</div>
+      </div>
+    </div>
+    <div id="s3-gp" class="glass-card" style="border-color:#89ff35; border-width:2.5px; padding:22px 26px;">
+      <div style="font-family:monospace; color:#89ff35; font-size:13px; font-weight:700;">TWO-STAGE COMMUNITY GLOBALPLATFORM TEE CERTIFICATION (EAL2+ / AVA_VAN_AP.3)</div>
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px; margin-top:12px;">
+        <div style="padding:14px 16px; border-radius:12px; background:rgba(255,42,157,0.16); border:1px solid #ff2a9d;">
+          <div style="font-size:20px; font-weight:900; color:#fff;">Campaign 1 (Now): $10,000 Goal</div>
+          <div style="font-size:14px; color:#e4def2; margin-top:4px;">Initial 3rd-party accredited lab pre-testing, Security Target (ST), &amp; eFuse/RPMB proofs.</div>
+        </div>
+        <div style="padding:14px 16px; border-radius:12px; background:rgba(83,213,250,0.14); border:1px solid #53d5fa;">
+          <div style="font-size:20px; font-weight:900; color:#fff;">Campaign 2 (Next): ~$100,000 Goal</div>
+          <div style="font-size:14px; color:#e4def2; margin-top:4px;">First open-source community-funded project to pursue full GlobalPlatform TEE certification.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCENE 4 (19.0s - 25.0s): What Contributors Receive & Call to Action -->
+  <div id="scene4" class="scene" style="display:flex; flex-direction:column; justify-content:space-between;">
+    <div>
+      <div class="eyebrow">SIGNED, SEALED, DELIVERED: IT&apos;S YOURS</div>
+      <div class="h1-sq" style="font-size:44px;">Assured Nodes or Pre-Installed Hardware in Hand</div>
+    </div>
+    <div id="s4-tiers" style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;">
+      <div class="glass-card" style="border-color:#53d5fa;">
+        <div style="font-family:monospace; color:#53d5fa; font-size:12px; font-weight:700;">EARLY ACCESS CLOUD NODE</div>
+        <div style="font-size:44px; font-weight:900; margin:6px 0;">$99</div>
+        <div style="font-size:20px; font-weight:800; margin-bottom:8px;">Assured Node Pass</div>
+        <div style="font-size:14.5px; color:#d7cee6; line-height:1.45;">60-day pass to a dedicated yubi-OS node verified via <b>yubios-attest</b> (OP-TEE fTPM PCR quote + U2F/HSM PIV signature).</div>
+      </div>
+      <div class="glass-card" style="border-color:#a855f7;">
+        <div style="font-family:monospace; color:#d8b4fe; font-size:12px; font-weight:700;">PRE-INSTALLED RK3399</div>
+        <div style="font-size:44px; font-weight:900; margin:6px 0;">$249</div>
+        <div style="font-size:20px; font-weight:800; margin-bottom:8px;">RockPro64 4GB Kit</div>
+        <div style="font-size:14.5px; color:#d7cee6; line-height:1.45;">Pre-flashed 64GB microSD + TF-A/OP-TEE/UEFI, ready to bind to your U2F/HSM + 30d Assured Node.</div>
+      </div>
+      <div class="glass-card" style="border-color:#ff2a9d; border-width:2.5px; background:linear-gradient(180deg, rgba(42,16,66,0.96), rgba(14,10,32,0.98));">
+        <div style="font-family:monospace; color:#ff7ac6; font-size:12px; font-weight:700;">FLAGSHIP RK3588 SPECIAL</div>
+        <div style="font-size:44px; font-weight:900; margin:6px 0;">$399</div>
+        <div style="font-size:20px; font-weight:800; margin-bottom:8px;">ROCK 5B 16GB Kit</div>
+        <div style="font-size:14.5px; color:#d7cee6; line-height:1.45;">Pre-flashed 128GB microSD + enforcing SB + GNOME + Antimony, bound to your U2F/HSM + 90d Assured Node.</div>
+      </div>
+    </div>
+    <div id="s4-cta" class="glass-card" style="border-color:#89ff35; padding:24px 28px; display:flex; align-items:center; justify-content:space-between; background:linear-gradient(90deg, rgba(255,42,157,0.2), rgba(83,213,250,0.18));">
+      <div>
+        <div style="font-family:monospace; color:#89ff35; font-size:13px; font-weight:700;">ALSO AVAILABLE: $25 x86 SETUP-MODE KIT • $749 TEE LAB PATRON</div>
+        <div style="font-size:28px; font-weight:900; margin-top:4px;">github.com/yubi-OS/yubiOS</div>
+        <div style="font-family:monospace; font-size:14px; color:#d7cee6; margin-top:4px;">Live Demo: https://asciinema.org/a/y9sHQPQTIbTWNIyr</div>
+      </div>
+      <div style="padding:16px 26px; border-radius:999px; background:#ff2a9d; color:#fff; font-size:20px; font-weight:900;">
+        BACK PHASE 1 →
+      </div>
+    </div>
+  </div>
+
+  <div id="bottombar">
+    <div style="font-family:monospace; font-size:12px; color:#978fa8;">Open-source project • Independent of Yubico • Linux® is a registered trademark</div>
+    <div class="progress-wrap"><div id="progress-fill"></div></div>
+  </div>
+
+  <!-- Declarative Audio -->
+  <audio id="a-bed" src="assets/music/yubios-campaign-score-25s.mp3" data-start="0" data-duration="25" data-track-index="10" data-volume="0.40"></audio>
+  <audio id="a-boot" src="assets/music/yubios-boot-sound-v5.mp3" data-start="0" data-duration="10" data-track-index="11" data-volume="0.62"></audio>
+  <audio id="a-b0" src="assets/sfx/bell0.ogg" data-start="0.5" data-duration="1.5" data-track-index="12" data-volume="0.65"></audio>
+  <audio id="a-s2" src="assets/sfx/bell3.ogg" data-start="6.0" data-duration="1.5" data-track-index="13" data-volume="0.7"></audio>
+  <audio id="a-k1" src="assets/sfx/key1.wav" data-start="7.0" data-duration="0.4" data-track-index="14" data-volume="0.75"></audio>
+  <audio id="a-k2" src="assets/sfx/key3.wav" data-start="8.2" data-duration="0.4" data-track-index="15" data-volume="0.75"></audio>
+  <audio id="a-k3" src="assets/sfx/bong1.ogg" data-start="10.2" data-duration="1.0" data-track-index="16" data-volume="0.8"></audio>
+  <audio id="a-brw" src="assets/sfx/yubios-browser-open.mp3" data-start="10.8" data-duration="3.5" data-track-index="17" data-volume="0.58"></audio>
+  <audio id="a-s3" src="assets/sfx/switch1.ogg" data-start="12.5" data-duration="1.0" data-track-index="18" data-volume="0.7"></audio>
+  <audio id="a-s3b" src="assets/sfx/select8.ogg" data-start="14.5" data-duration="1.0" data-track-index="19" data-volume="0.65"></audio>
+  <audio id="a-s3c" src="assets/sfx/drop1.ogg" data-start="16.5" data-duration="1.0" data-track-index="20" data-volume="0.65"></audio>
+  <audio id="a-s4" src="assets/sfx/bell0.ogg" data-start="19.0" data-duration="1.5" data-track-index="21" data-volume="0.75"></audio>
+  <audio id="a-s4b" src="assets/sfx/bong1.ogg" data-start="21.5" data-duration="1.2" data-track-index="22" data-volume="0.75"></audio>
+</div>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script>
+  (function() {
+    function mulberry32(a) {
+      return function() {
+        var t = a += 0x6D2B79F5;
+        t = Math.imul(t ^ (t >>> 15), t | 1);
+        t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+        return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+      };
+    }
+    var rand = mulberry32(20261122);
+    var c = document.getElementById('bg-canvas');
+    var ctx = c.getContext('2d');
+    var colors = ['#ff2a9d', '#53d5fa', '#a855f7', '#89ff35', '#ffffff'];
+    for (var i = 0; i < 120; i++) {
+      ctx.fillStyle = colors[Math.floor(rand() * colors.length)];
+      ctx.globalAlpha = 0.14 + rand() * 0.32;
+      ctx.beginPath();
+      ctx.arc(rand() * 1080, rand() * 1080, 0.8 + rand() * 2.0, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  })();
+
+  var tl = gsap.timeline({ paused: true });
+  tl.fromTo('#progress-fill', { width: '0%' }, { width: '100%', duration: 25, ease: 'none' }, 0);
+
+  // Scene 1 (0.0 - 6.0s)
+  tl.set('#scene1', { opacity: 1, visibility: 'visible' }, 0);
+  tl.fromTo('#s1-hero', { scale: 0.96 }, { scale: 1, duration: 0.9, ease: 'power3.out' }, 0);
+  tl.fromTo('#s1-grid', { y: 16, opacity: 0.85 }, { y: 0, opacity: 1, duration: 0.7, ease: 'power2.out' }, 0.4);
+  tl.to('#scene1', { opacity: 0, duration: 0.35, ease: 'power2.in' }, 5.65);
+  tl.set('#scene1', { visibility: 'hidden' }, 6.0);
+
+  // Scene 2 (6.0 - 12.5s)
+  tl.set('#scene2', { visibility: 'visible', opacity: 0 }, 6.0);
+  tl.to('#scene2', { opacity: 1, duration: 0.4, ease: 'power2.out' }, 6.0);
+  ['#sq-l1','#sq-l2','#sq-l3','#sq-l4','#sq-l5','#sq-l6','#sq-l7'].forEach(function(sel, idx) {
+    tl.set(sel, { opacity: 0, x: -10 }, 6.0);
+    tl.to(sel, { opacity: 1, x: 0, duration: 0.28, ease: 'power2.out' }, 6.2 + idx * 0.55);
+  });
+  tl.to('#scene2', { opacity: 0, duration: 0.35, ease: 'power2.in' }, 12.15);
+  tl.set('#scene2', { visibility: 'hidden' }, 12.5);
+
+  // Scene 3 (12.5 - 19.0s)
+  tl.set('#scene3', { visibility: 'visible', opacity: 0 }, 12.5);
+  tl.to('#scene3', { opacity: 1, duration: 0.4, ease: 'power2.out' }, 12.5);
+  tl.fromTo('#s3-hw', { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' }, 12.65);
+  tl.fromTo('#s3-gp', { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' }, 13.4);
+  tl.to('#scene3', { opacity: 0, duration: 0.35, ease: 'power2.in' }, 18.65);
+  tl.set('#scene3', { visibility: 'hidden' }, 19.0);
+
+  // Scene 4 (19.0 - 25.0s)
+  tl.set('#scene4', { visibility: 'visible', opacity: 0 }, 19.0);
+  tl.to('#scene4', { opacity: 1, duration: 0.4, ease: 'power2.out' }, 19.0);
+  tl.fromTo('#s4-tiers', { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' }, 19.15);
+  tl.fromTo('#s4-cta', { scale: 0.95, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, ease: 'back.out(1.4)' }, 19.8);
+
+  window.__timelines = window.__timelines || {};
+  window.__timelines['root'] = tl;
+</script>
+</body>
+</html>

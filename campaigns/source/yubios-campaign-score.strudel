@@ -1,0 +1,17 @@
+// yubiOS Crowdfunding Campaign Score — "Owner Orbit & Handshake Extended" (2026-11-22)
+// Built on the boot-sound-v5.strudel challenge-response progression (Am9 -> Fmaj9 -> G13 -> Cmaj9)
+// and Dm9 -> Em7 -> Fmaj7#11 -> G13 turnaround, with warm Rhodes/triangle voicings, sub-bass,
+// C-major pentatonic verification climb, and swung micro-percussion with breath drops at scene seams.
+setcpm(24) // 96 BPM (1 cycle = 2.5s bar)
+
+$: s("pink").hpf(80).lpf(1400).gain(.025)
+
+$: note("<[a2,e3,g3,b3,c4] [f2,c3,e3,g3,a3] [g2,d3,f3,a3,b3] [c3,e3,g3,b3,d4] [d2,a2,c3,e3,f3] [e2,b2,d3,g3,b3] [f2,c3,e3,a3,b3] [g2,d3,f3,a3,e4]>")
+  .s("triangle").lpf(sine.slow(8).range(520, 1350)).attack(.04).decay(.9).sustain(.45).release(1.4).room(.65).gain(.28)
+
+$: note("<[a1 ~ a1 e2] [f1 ~ f1 c2] [g1 ~ g1 d2] [c2 ~ c2 g1] [d1 ~ d1 a1] [e1 ~ e1 b1] [f1 ~ f1 c2] [g1 ~ g1 d2]>")
+  .s("sine").lpf(190).attack(.01).decay(.35).sustain(.2).release(.25).gain(.34)
+
+$: n("[0 2 4 7 9 7 4 2]*2").scale("C4:major:pentatonic")
+  .s("triangle").attack(.005).decay(.32).sustain(0).release(.75).lpf(1850).room(.7)
+  .pan(sine.slow(4).range(.22, .78)).gain("<.12 .18 .22 .16 .14 .20 .24 .18>")

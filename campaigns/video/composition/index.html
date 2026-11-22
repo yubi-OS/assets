@@ -328,7 +328,7 @@
             <div style="font-size:26px; font-weight:800; margin: 8px 0;">&ldquo;Is the authorized human owner present?&rdquo;</div>
             <ul class="bullet-list" style="margin-top:10px;">
               <li><b>PIV Slot 9a (PKCS#11):</b> Mints PK/KEK/db &amp; signs systemd-boot + Type2 UKI</li>
-              <li><b>FIDO2 hmac-secret:</b> Decrypts LUKS2 root (p3) &amp; systemd-homed BTRFS volume</li>
+              <li><b>FIDO2 hmac-secret:</b> Decrypts LUKS2 root (p3) &amp; systemd-homed ext4 volume</li>
               <li><b>FIDO2 ed25519-sk &amp; pam-u2f:</b> Hardware-resident SSH keys + physical touch sudo</li>
             </ul>
           </div>
@@ -374,7 +374,7 @@
             <div id="t-line5" style="color:#a5f3fc;">       efi-updatevar -&gt; OP-TEE StMM (SetupMode: 1 -&gt; 0) | sbverify UKI: PASS</div>
             <div id="t-line6" style="color:#89ff35; font-weight:700;">[1908] STEP 2/5 yubiOS-enroll-luks: /dev/mmcblk1p3 (110.6G) LUKS2 + LVM VG lvm</div>
             <div id="t-line7" style="color:#a5f3fc;">       systemd-cryptenroll --fido2-device=auto (hmac-secret PIN + touch: OK)</div>
-            <div id="t-line8" style="color:#89ff35; font-weight:700;">[2140] STEP 3/5 yubiOS-enroll-homed: /var/home/yubios.home (103.6G BTRFS FIDO2)</div>
+            <div id="t-line8" style="color:#89ff35; font-weight:700;">[2140] STEP 3/5 yubiOS-enroll-homed: /var/home/yubios.home (103.6G ext4 FIDO2)</div>
             <div id="t-line9" style="color:#89ff35; font-weight:700;">[2210] STEP 4/5 yubiOS-enroll-ssh  : Generated resident OpenSSH ed25519-sk key</div>
             <div id="t-line10" style="color:#89ff35; font-weight:700;">[2261] STEP 5/5 yubiOS-enroll-pam  : Registered /etc/yubico/u2f_keys (pam-u2f)</div>
             <div id="t-line11" style="color:#ff7ac6; font-weight:700; margin-top:8px;">[2909] REBOOT -&gt; secureboot: Secure boot enabled | Kernel locked down | YUBIOS_TPM_OK</div>
@@ -390,7 +390,7 @@
             <div style="font-family:monospace; font-size:13px; color:#89ff35; font-weight:700; margin-bottom:10px;">5-STEP HARDWARE CEREMONY CHECKLIST</div>
             <div id="chk1" style="font-size:16px; margin-bottom:8px; color:#ffffff;">✓ <b>1. UEFI Secure Boot</b>: Slot 9a PK/KEK/db + local OCI commit</div>
             <div id="chk2" style="font-size:16px; margin-bottom:8px; color:#ffffff;">✓ <b>2. LUKS2 + 3-Way /usr Overlay</b>: FIDO2 hmac-secret bound</div>
-            <div id="chk3" style="font-size:16px; margin-bottom:8px; color:#ffffff;">✓ <b>3. systemd-homed</b>: Per-user LUKS2 + BTRFS home encrypted</div>
+            <div id="chk3" style="font-size:16px; margin-bottom:8px; color:#ffffff;">✓ <b>3. systemd-homed</b>: Per-user LUKS2 + ext4 home encrypted</div>
             <div id="chk4" style="font-size:16px; margin-bottom:8px; color:#ffffff;">✓ <b>4. Resident SSH</b>: ed25519-sk key stays inside hardware</div>
             <div id="chk5" style="font-size:16px; color:#ffffff;">✓ <b>5. PAM U2F Sudo</b>: Physical tap required per privilege action</div>
           </div>
@@ -727,7 +727,7 @@
   </div>
 
   <!-- Declarative Audio Tracks (unique data-track-index per clip) -->
-  <audio id="a-bed" src="assets/music/vol12.mp3" data-start="0" data-duration="90" data-track-index="10" data-volume="0.26"></audio>
+  <audio id="a-bed" src="assets/music/yubios-campaign-score-90s.mp3" data-start="0" data-duration="90" data-track-index="10" data-volume="0.38"></audio>
   <audio id="a-boot" src="assets/music/yubios-boot-sound-v5.mp3" data-start="0" data-duration="10" data-track-index="11" data-volume="0.65"></audio>
   <audio id="a-bell0" src="assets/sfx/bell0.ogg" data-start="0.56" data-duration="2" data-track-index="12" data-volume="0.65"></audio>
   <audio id="a-s2" src="assets/sfx/switch1.ogg" data-start="10.0" data-duration="1" data-track-index="13" data-volume="0.7"></audio>

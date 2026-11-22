@@ -191,7 +191,7 @@ def build_banner_03_proof_of_life() -> str:
     <text x="64" y="260" fill="#53d5fa" font-family="{FONT_MONO}" font-size="12.5">[boot] BL31: v2.15.0(release):yubiOS | OP-TEE 4.11 (fTPM + StandaloneMM)</text>
     <text x="64" y="282" fill="#89ff35" font-family="{FONT_MONO}" font-size="12.5">[1/5] yubiOS-enroll-sb   : PIV slot 9a PK/KEK/db -&gt; StMM (SetupMode 1 -&gt; 0)</text>
     <text x="64" y="304" fill="#89ff35" font-family="{FONT_MONO}" font-size="12.5">[2/5] yubiOS-enroll-luks : /dev/mmcblk1p3 LUKS2 FIDO2 hmac-secret + LVM</text>
-    <text x="64" y="326" fill="#89ff35" font-family="{FONT_MONO}" font-size="12.5">[3/5] yubiOS-enroll-homed: /var/home/yubios.home LUKS2+BTRFS FIDO2 bound</text>
+    <text x="64" y="326" fill="#89ff35" font-family="{FONT_MONO}" font-size="12.5">[3/5] yubiOS-enroll-homed: /var/home/yubios.home LUKS2+ext4 FIDO2 bound</text>
     <text x="64" y="348" fill="#89ff35" font-family="{FONT_MONO}" font-size="12.5">[4/5] yubiOS-enroll-ssh  : OpenSSH resident ed25519-sk key generated on key</text>
     <text x="64" y="370" fill="#89ff35" font-family="{FONT_MONO}" font-size="12.5">[5/5] yubiOS-enroll-pam  : pam-u2f registered (/etc/yubico/u2f_keys)</text>
     <text x="64" y="396" fill="#ff7ac6" font-family="{FONT_MONO}" font-size="12.5">[reboot] secureboot: Secure boot enabled | Kernel locked down | YUBIOS_TPM_OK</text>

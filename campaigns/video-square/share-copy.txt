@@ -1,0 +1,1 @@
+yubiOS: FIDO2-first immutable Linux where your U2F/HSM signs UEFI Secure Boot (Slot 9a), decrypts LUKS2 & ext4 systemd-homed, and attests your node. Pre-installed on Radxa ROCK 5B ($399) & RockPro64 ($249), expanding to x86-64 Setup Mode, and raising $10k for Phase 1 GlobalPlatform TEE lab testing. Proof of life: https://asciinema.org/a/y9sHQPQTIbTWNIyr

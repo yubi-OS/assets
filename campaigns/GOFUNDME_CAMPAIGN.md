@@ -30,7 +30,7 @@ We built **yubiOS** ([github.com/yubi-OS/yubiOS](https://github.com/yubi-OS/yubi
 
 1. **UEFI Secure Boot & Kernel Signing:** Your U2F/HSM PIV slot `9a` (`RSA-2048` via `systemd-sbsign` + PKCS#11) mints your own Platform Key (`PK`), Key Exchange Key (`KEK`), and Signature Database (`db`), and signs `systemd-boot` and the Type2 Unified Kernel Image (UKI).
 2. **Full-Disk Decryption (`LUKS2` + LVM):** Your U2F/HSM FIDO2 `hmac-secret` credential (`systemd-cryptenroll`, requiring both PIN and physical touch) decrypts the root partition (`p3`) and mounts a read-only, SHA-512-verified `composefs` (`verity=require`) `/usr` with a 3-way A/B OverlayFS.
-3. **Encrypted User Homes (`systemd-homed`):** Your `/var/home/<user>.home` LUKS2 + BTRFS volume stays encrypted at rest until your physical U2F/HSM is present.
+3. **Encrypted User Homes (`systemd-homed`):** Your `/var/home/<user>.home` LUKS2 + ext4 volume stays encrypted at rest until your physical U2F/HSM is present.
 4. **Hardware-Resident SSH & Sudo (`ed25519-sk` + `pam-u2f`):** Your SSH private key lives permanently inside your U2F/HSM hardware, and every `sudo` command requires a physical tap on your token.
 5. **Provenance-Gated Browsing (Antimony v156):** Ships with the **GNOME Wayland desktop** and our checksum-pinned **Antimony Browser (`v156.0.8078.47-1`)**, featuring engine-layer C2PA content provenance inspection (`chrome://settings/provenance`).
 

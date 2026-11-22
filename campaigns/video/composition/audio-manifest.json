@@ -1,10 +1,10 @@
 [
   {
-    "src": "assets/music/vol12.mp3",
+    "src": "assets/music/yubios-campaign-score-90s.mp3",
     "start": 0,
     "duration": 90,
     "track": 10,
-    "volume": 0.26,
+    "volume": 0.38,
     "fadeOut": {
       "start": 87.5,
       "dur": 2.5
